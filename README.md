@@ -30,7 +30,13 @@ About IHP
 
 Haskell web framework: The Rails/Django for Haskell
 
+IHP uses the nix package manager to manage the whole set of dependencies of
+your application.
+
 ### Installing Nix
+
+See also
+https://ihp.digitallyinduced.com/Guide/installation.html#1-dependency-nix-package-manager
 
 ```
 pacman -S nix
@@ -43,6 +49,9 @@ nix-channel --update
 
 ### Creating the IHP env
 
+See also
+https://ihp.digitallyinduced.com/Guide/installation.html#2-installing-ihp
+
 ```
 nix-env -f https://downloads.digitallyinduced.com/ihp-new.tar.gz -i ihp-new
 ```
@@ -53,7 +62,7 @@ nix-env -f https://downloads.digitallyinduced.com/ihp-new.tar.gz -i ihp-new
 ihp-new blog
 ```
 
-Tool will run for ~15min
+Tool will run for ~15min the first time you create a project.
 
 
 ### Problems
@@ -63,7 +72,7 @@ Tool will run for ~15min
    ```
    Didn't do the `nix-channel --add` / `--update`. Also may need to logout / log-in
 
-2. I got an error during `ipc-new blog` which I needed to solve with:
+2. I got an error during `ihc-new blog` which I needed to solve with:
    ```
-   echo "trusted-users = root raphael" | sudo tee -a /etc/nix/nix.conf
+   echo "trusted-users = root $USER" | sudo tee -a /etc/nix/nix.conf
    ```
