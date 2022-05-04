@@ -14,6 +14,7 @@ About Ferrum, Cuprite, Mechanize & Vessel
 Run the _Cuprite_ and _Vessel_ examples:
 
 ```
+cd josua
 bundle install
 ruby ./cuprite.rb
 ruby ./vessel.rb
